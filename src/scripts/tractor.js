@@ -7,45 +7,26 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 
 
-
+//here we are creating an exportable function named plantSeeds.
 export const plantSeeds = (yearlyPlan) => {
+    //in this function we are using a forOf loop to iterate through the yearlyPlan
     for (const seeds of yearlyPlan) {
         for (const seed of seeds) {
-    if (seed === "Asparagus") {
-    addPlant(createAsparagus())
-    } else if (seed === "Corn") {
-     addPlant(createCorn())
-    } else if (seed === "Potato") {
-    addPlant(createPotato())
-    } else if (seed === "Soybean") {
-   addPlant(createSoybean())
-    } else if (seed === "Sunflower") {
-     addPlant(createSunflower())
-    } else if (seed === "Wheat") {
-    addPlant(createWheat())
+            //for each crop if the seed is "this specific crop", We are invoking the createAsparagus argument inside of the addPlant function which pushes an asparagus object into a copy of the plantsGrowing array in the field file. 
+            if (seed === "Asparagus") {
+            addPlant(createAsparagus())
+            } else if (seed === "Corn") {
+            addPlant(createCorn())
+            } else if (seed === "Potato") {
+            addPlant(createPotato())
+            } else if (seed === "Soybean") {
+                addPlant(createSoybean())
+            } else if (seed === "Sunflower") {
+                addPlant(createSunflower())
+            } else if (seed === "Wheat") {
+                addPlant(createWheat())
+            }
+        }
     }
 }
-}
-}
 
-// const asparagusSeed = createAsparagus()
-
-// const cornSeed = createCorn()
-// // console.log(cornSeed)
-
-// const potatoSeed = createPotato()
-// // console.log(potatoSeed)
-
-// const soybeanSeed = createSoybean()
-// // console.log(soybeanSeed)
-
-// const sunflowerSeed = createSunflower()
-// // console.log(sunflowerSeed)
-
-// const wheatSeed = createWheat()
-// // console.log(wheatSeed)
-
-
-
-
-//  console.log(asparagusSeed, cornSeed, potatoSeed, soybeanSeed, sunflowerSeed, wheatSeed)

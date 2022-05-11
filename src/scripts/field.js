@@ -6,13 +6,16 @@ const plantsGrowing = [];
 //This function must accept a seed object as an input
 //The function will add the seed to the field.
 export const addPlant = (seedObj) => {
+    //here we are creating a variable arrayCheck and assigning its value to the Array.isArray method which checks to see whether the passed value is an array. In this case seedObj
     let arrayCheck = Array.isArray(seedObj)
-    if (arrayCheck === true) {
+    if (arrayCheck === true) 
+    {
         plantsGrowing.push(seedObj[0])
         plantsGrowing.push(seedObj[1])
-    } else {
-        plantsGrowing.push(seedObj)
-    }
+        } else 
+        {
+            plantsGrowing.push(seedObj)
+        }
     return plantsGrowing
 }
 

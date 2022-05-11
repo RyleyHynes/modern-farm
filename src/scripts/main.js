@@ -3,15 +3,15 @@ import { addPlant } from "./field.js"
 import { usePlants} from "./field.js"
 import { plantSeeds } from "./tractor.js"
 import { harvestPlants } from "./harvester.js"
-// import {harvestPlants} from "./harvester.js"
 import { Catalog } from "./catalog.js"
 
-//invoke the different crp functions and assign their return value to a new variable
-//invoking function from plan module and assigning its return value to yearlyPlan
+
+//Our created plan is now our yearly plan so we need to invoke the function from plan module and assigning its return value to yearlyPlan
 const yearlyPlan = createPlan();
 console.log(yearlyPlan)
 
-//invoke the function addPlant and reassign its return value to a new variable
+//**** 4th Step **** invoke the function addPlant and reassign its return value to a new variable
+
 // const asparagusPlant = addPlant(createAsparagus())
 // const cornPlant = addPlant(createCorn())
 // const potatoPlant = addPlant(createPotato())
@@ -21,12 +21,10 @@ console.log(yearlyPlan)
 
 // console.log(asparagusPlant, cornPlant, potatoPlant, soybeanPlant, sunflowerPlant, wheatPlant)
 
-//invoke the function usePlants and reassign its return value to a new variable
+//**** 5th Step ****invoke the function plantSeeds with the yearlyPlan as its argument and assign its return value to plantedSeeds 
 
 const plantedSeeds = plantSeeds(yearlyPlan)
 
-
-// console.log(usePlants())
 
 
 
@@ -40,4 +38,3 @@ parentHTMLElement.innerHTML = Catalog(plantsHarvested)
 
 
 
-// // console.log("Welcome to the main module")

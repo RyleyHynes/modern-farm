@@ -1,5 +1,4 @@
-//define and export a function for creating a seed. Each of these functions should return an object with the properties type, height, output
-
+//define and export a function for creating a seed. The corn function should return an array with two identical objects in it. 
 export const createCorn = (cornObj) => {
     cornObj = [
     {
